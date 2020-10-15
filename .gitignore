@@ -15,6 +15,7 @@
 *.so
 *.dylib
 *.dll
+!glew32.dll
 
 # Fortran module files
 *.mod
@@ -30,6 +31,7 @@
 *.exe
 *.out
 *.app
-.vs/Git/v16/.suo
+*.suo
 *.json
 *.sqlite
+.vs/
