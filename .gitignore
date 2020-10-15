@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+.vs/Git/v16/.suo
+*.json
+*.sqlite
