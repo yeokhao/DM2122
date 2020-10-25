@@ -3,8 +3,25 @@
 
 #include "Scene.h"
 
+enum GEOMETRY_TYPE
+{
+	GEO_TRIANGLE_1 = 0,
+	GEO_TRIANGLE_2,
+	GEO_TRIANGLE_3,
+	GEO_OCTAGON,
+	GEO_MYSHAPE,
+	GEO_MYSHAPE_2,
+	NUM_GEOMETRY,
+};
+
 class Scene1 : public Scene
 {
+private:
+	unsigned m_vertexArrayID;
+	unsigned m_vertexBuffer[NUM_GEOMETRY];
+	unsigned m_colorBuffer[NUM_GEOMETRY];
+	unsigned m_programID;
+
 public:
 	Scene1();
 	~Scene1();
