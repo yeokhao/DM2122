@@ -78,12 +78,15 @@ void Scene2::Update(double dt)
 
 		// FIX ROTATION WHEN VIDEO RECORDING COMES OUT
 
-		int rotateDirection = 1;
+		//if (rotateAngle >= 360)
+		//	rotateAngle = 0
 
-		//while (rotateAngle > 30)
-		//	rotateDirection = -1;
-		//if (rotateAngle == 0)
-		//	rotateDirection = 1;
+		if ((rotateDirection != -1) && (rotateAngle < 90))
+			rotateDirection = 1;
+		else if ((rotateDirection == -1) && (rotateAngle <= -90))
+			rotateDirection = 1;
+		else
+			rotateDirection = -1;
 
 		rotateAngle += (float)(rotateDirection * 100 * dt);
 

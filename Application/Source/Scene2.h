@@ -27,6 +27,7 @@ private:
 	unsigned m_programID;
 
 	float rotateAngle;
+	int rotateDirection;
 	float translateX;
 	float scaleAll;
 
