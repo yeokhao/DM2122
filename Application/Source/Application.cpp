@@ -13,6 +13,7 @@
 
 #include "Scene1.h"
 #include "Scene2.h"
+#include "Scene3.h"
 
 GLFWwindow* m_window;
 const unsigned char FPS = 60; // FPS of this game
@@ -71,7 +72,7 @@ void Application::Init()
 
 
 	//Create a window and create its OpenGL context
-	m_window = glfwCreateWindow(800, 600, "Test Window", NULL, NULL);
+	m_window = glfwCreateWindow(800, 800, "Test Window", NULL, NULL);
 
 	//If the window couldn't be created
 	if (!m_window)
@@ -102,7 +103,7 @@ void Application::Init()
 void Application::Run()
 {
 	//Main Loop
-	Scene *scene = new Scene2();
+	Scene *scene = new Scene3();
 	scene->Init();
 
 	m_timer.startTimer();    // Start timer to calculate how long it takes to render this frame
